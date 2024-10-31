@@ -1,0 +1,25 @@
+<resources>
+    <string name="user_name">Константин Западный</string>
+    <string name="description">Люблю свою музыку, программировать игры на ассемблере</string>
+    <string name="specialty">Специальность</string>
+    <string name="specialty_value">Музыкант</string>
+    <string name="age">Возраст</string>
+    <string name="age_value">27 лет</string>
+    <string name="height">Рост</string>
+    <string name="height_value">185</string>
+    <string name="posts">Постов</string>
+    <string name="posts_count">299</string>
+    <string name="subscribes">Подписок</string>
+    <string name="subscribes_count">299</string>
+    <string name="subscribers">Подписчиков</string>
+    <string name="subscribers_count">1300</string>
+    <string name="about_me">О себе</string>
+    <string name="bio" formatted="false">Йе, урождённый Канье Омари Вест — репер, певец, актер, автор, продюсер и дизайнер из Атланты/Чикаго.&#xA;&#xA;Основатель собственного лейбла G.O.O.D. Music.&#xA;&#xA;Вырос в Чикаго, где с юных лет был связан с музыкой.</string>
+    <string name="interests">Интересы</string>
+    <string name="music">Музыка</string>
+    <string name="fitness">Фитнес</string>
+    <string name="swimming">Плавание</string>
+    <string name="programming">Программирование</string>
+    <string name="movies">Кино</string>
+    <string name="design">Дизайн</string>
+</resources>
