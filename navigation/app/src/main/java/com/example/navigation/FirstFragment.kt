@@ -20,8 +20,8 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
             val surname = binding.surnameEditText.text.toString()
 
             val arguments = Bundle().apply {
-                putString("NAME", name)
-                putString("SURNAME", surname)
+                putString(UserData.NAME, name)
+                putString(UserData.SURNAME, surname)
             }
 
             if (name.isNotEmpty() && surname.isNotEmpty()) {

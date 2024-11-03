@@ -15,9 +15,9 @@ class ThirdFragment : Fragment(R.layout.fragment_third) {
         binding = FragmentThirdBinding.bind(view)
 
 
-        val name = arguments?.getString("NAME")
-        val surname = arguments?.getString("SURNAME")
-        val birthDate = arguments?.getString("BIRTH_DATE")
+        val name = arguments?.getString(UserData.NAME)
+        val surname = arguments?.getString(UserData.SURNAME)
+        val birthDate = arguments?.getString(UserData.BIRTH_DATE)
         binding.name.text = name.toString()
         binding.surname.text = surname.toString()
         binding.birthDate.text = birthDate.toString()

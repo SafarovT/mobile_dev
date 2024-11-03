@@ -42,10 +42,10 @@ class ListFragment : Fragment(R.layout.list_fragment) {
 
         val adapter = MovieAdapter {
             val arguments = Bundle().apply {
-                putString("TITLE", it.title)
-                putString("DESCRIPTION", it.description)
-                putInt("IMAGE_RES_ID", it.imageResId)
-                putDouble("SCORE", it.score)
+                putString(Movie.TITLE, it.title)
+                putString(Movie.DESCRIPTION, it.description)
+                putInt(Movie.IMAGE_RES_ID, it.imageResId)
+                putDouble(Movie.SCORE, it.score)
             }
 
             findNavController()

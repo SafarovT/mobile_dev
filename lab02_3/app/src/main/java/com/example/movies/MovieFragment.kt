@@ -13,9 +13,9 @@ class MovieFragment : Fragment(R.layout.movie_fragment) {
         super.onCreate(savedInstanceState)
         binding = MovieFragmentBinding.bind(view)
 
-        val title = arguments?.getString("TITLE")
-        val description = arguments?.getString("DESCRIPTION")
-        val imageResId = arguments?.getInt("IMAGE_RES_ID")
+        val title = arguments?.getString(Movie.TITLE)
+        val description = arguments?.getString(Movie.DESCRIPTION)
+        val imageResId = arguments?.getInt(Movie.IMAGE_RES_ID)
 
         binding.title.text = title
         binding.description.text = description

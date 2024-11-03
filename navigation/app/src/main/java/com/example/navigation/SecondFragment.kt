@@ -16,8 +16,8 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         binding = FragmentSecondBinding.bind(view)
 
 
-        val name = arguments?.getString("NAME")
-        val surname = arguments?.getString("SURNAME")
+        val name = arguments?.getString(UserData.NAME)
+        val surname = arguments?.getString(UserData.SURNAME)
         binding.name.text = name
         binding.surname.text = surname
 
@@ -30,9 +30,9 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
         binding.next.setOnClickListener {
             val arguments = Bundle().apply {
-                putString("NAME", binding.name.text.toString())
-                putString("SURNAME", binding.surname.text.toString())
-                putString("BIRTH_DATE", binding.birthDate.text.toString())
+                putString(UserData.NAME, binding.name.text.toString())
+                putString(UserData.SURNAME, binding.surname.text.toString())
+                putString(UserData.BIRTH_DATE, binding.birthDate.text.toString())
             }
             findNavController()
                 .navigate(R.id.action_secondFragment_to_thirdFragment, arguments)
