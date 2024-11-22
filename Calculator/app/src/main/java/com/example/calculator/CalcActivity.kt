@@ -20,28 +20,35 @@ class CalcActivity : AppCompatActivity() {
             viewModel.state.collect { state ->
                 binding.input.text = state.input
                 binding.result.text = state.result
+                binding.result.setTextColor(getColor(state.color))
             }
         }
 
         setEventListeners()
     }
 
+    private fun setInputButtonListener(button: android.widget.Button) {
+        button.setOnClickListener {
+            viewModel.onInput(button.text.toString())
+        }
+    }
+
     private fun setEventListeners() {
-        binding.button1.setOnClickListener { viewModel.onInput("1") }
-        binding.button2.setOnClickListener { viewModel.onInput("2") }
-        binding.button3.setOnClickListener { viewModel.onInput("3") }
-        binding.button4.setOnClickListener { viewModel.onInput("4") }
-        binding.button5.setOnClickListener { viewModel.onInput("5") }
-        binding.button6.setOnClickListener { viewModel.onInput("6") }
-        binding.button7.setOnClickListener { viewModel.onInput("7") }
-        binding.button8.setOnClickListener { viewModel.onInput("8") }
-        binding.button9.setOnClickListener { viewModel.onInput("9") }
-        binding.button10.setOnClickListener { viewModel.onInput("0") }
-        binding.button11.setOnClickListener { viewModel.onInput("+") }
-        binding.button12.setOnClickListener { viewModel.onInput("-") }
-        binding.button13.setOnClickListener { viewModel.onInput("×") }
-        binding.button14.setOnClickListener { viewModel.onInput("÷") }
+        setInputButtonListener(binding.button1)
+        setInputButtonListener(binding.button2)
+        setInputButtonListener(binding.button3)
+        setInputButtonListener(binding.button4)
+        setInputButtonListener(binding.button5)
+        setInputButtonListener(binding.button6)
+        setInputButtonListener(binding.button7)
+        setInputButtonListener(binding.button8)
+        setInputButtonListener(binding.button9)
+        setInputButtonListener(binding.button10)
+        setInputButtonListener(binding.button11)
+        setInputButtonListener(binding.button12)
+        setInputButtonListener(binding.button13)
+        setInputButtonListener(binding.button14)
         binding.button15.setOnClickListener { viewModel.onDeleteLast() }
-        binding.button16.setOnClickListener { viewModel.onInput(".") }
+        setInputButtonListener(binding.button16)
     }
 }
