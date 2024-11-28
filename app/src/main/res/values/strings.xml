@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CookieClicker</string>
+    <string name="bank">Банк</string>
+    <string name="mine">Шахта</string>
+    <string name="cursor">Курсор</string>
+    <string name="fabric">Завод</string>
+    <string name="farm">Ферма</string>
+    <string name="grandmother">Бабушка</string>
+    <string name="temple">Храм</string>
+    <string name="wizard_tower">Башня волшебника</string>
+    <string name="cookies">Печенья</string>
+    <string name="inSecond">В секунду</string>
+    <string name="time">Время</string>
+    <string name="average_speed">Средняя скорость</string>
+    <string name="speed_measurement">п/мин</string>
+    <string name="clicker">Clicker</string>
+    <string name="shop">Shop</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/clicker"
+        android:enabled="true"
+        android:icon="@drawable/icon_active"
+        android:title="@string/clicker"/>
+    <item
+        android:id="@+id/shop"
+        android:enabled="true"
+        android:icon="@drawable/icon_inactive"
+        android:title="@string/shop"/>
+</menu>
