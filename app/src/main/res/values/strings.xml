@@ -8,11 +8,13 @@
     <string name="grandmother">Бабушка</string>
     <string name="temple">Храм</string>
     <string name="wizard_tower">Башня волшебника</string>
-    <string name="cookies">Печенья</string>
-    <string name="inSecond">В секунду</string>
+    <string name="cookies">Печенья: </string>
+    <string name="in_second">В секунду: </string>
     <string name="time">Время</string>
-    <string name="average_speed">Средняя скорость</string>
+    <string name="average_speed">Средняя скорость: </string>
     <string name="speed_measurement">п/мин</string>
     <string name="clicker">Clicker</string>
     <string name="shop">Shop</string>
+    <string name="shop_not_enough_money_message">Недостаточно печенья для покупки улучшения!</string>
+    <string name="income_message">У вас 2000 печенья, Пора прикупить что-нибудь новое!</string>
 </resources>

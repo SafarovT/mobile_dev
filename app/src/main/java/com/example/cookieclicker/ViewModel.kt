@@ -3,6 +3,7 @@ package com.example.cookieclicker
 import android.view.MenuItem
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -12,8 +13,11 @@ enum class Tab {
     SHOP,
 }
 
+val INCOME_MESSAGE_NUMBER = 2000
+
 data class State(
     val cookies: Long = 0,
+    val lastSavedCookies: Long = 0,
     val avgSpeed: Int = 1,
     val cookiesPerSecond: Long = 0,
     val time: Long = 0,
@@ -21,21 +25,35 @@ data class State(
     val tab: Tab = Tab.CLICKER,
 )
 
+sealed interface CookieEvent {
+    data object NotEnoughToBuy : CookieEvent
+    data object CookiesIncomeNotification : CookieEvent
+}
+
 class ViewModel: ViewModel() {
     val state = MutableStateFlow(State())
+    val event = MutableSharedFlow<CookieEvent>()
 
     fun onChange() {
-
-        state.update {
-            val newCookies = it.cookies + it.cookiesPerSecond
-            it.copy(
-                cookies = newCookies,
-                time = it.time + 1,
-                shopList = it.shopList.map {
-                    it.copy(disabled = newCookies < it.price)
+        viewModelScope.launch {
+            state.update {
+                val newCookies = it.cookies + it.cookiesPerSecond
+                var newLastSavedCookies = it.lastSavedCookies
+                if (newCookies - it.lastSavedCookies >= INCOME_MESSAGE_NUMBER) {
+                    event.emit(CookieEvent.CookiesIncomeNotification)
+                    newLastSavedCookies = newCookies
                 }
-            )
+                it.copy(
+                    cookies = newCookies,
+                    lastSavedCookies =  newLastSavedCookies,
+                    time = it.time + 1,
+                    shopList = it.shopList.map {
+                        it.copy(disabled = newCookies < it.price)
+                    }
+                )
+            }
         }
+
     }
 
     fun onCookieClick() {
@@ -55,12 +73,15 @@ class ViewModel: ViewModel() {
     fun shopPurchase(product: Product) {
         viewModelScope.launch {
             if (state.value.cookies < product.price) {
+                event.emit(CookieEvent.NotEnoughToBuy)
                 return@launch
             }
 
             state.update { prev ->
+                val newCookies = prev.cookies - product.price
                 prev.copy(
-                    cookies = prev.cookies - product.price,
+                    cookies = newCookies,
+                    lastSavedCookies =  newCookies,
                     cookiesPerSecond = (prev.cookiesPerSecond + product.income).toLong(),
                     shopList = prev.shopList.map {
                         if (it.titleId === product.titleId) {
