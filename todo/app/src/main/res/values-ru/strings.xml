@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Список задач</string>
+    <string name="status_created">Создана</string>
+    <string name="status_in_process">В процессе</string>
+    <string name="status_completed">Завершена</string>
+    <string name="task_editor">Редактор задачи</string>
+    <string name="task_name">Заголовок задачи</string>
+    <string name="task_description">Описание задачи</string>
+    <string name="incorrect_pin">Некоректный PIN</string>
+    <string name="enter_pin">Введи PIN</string>
+    <string name="repeat_pin">Повтори PIN</string>
+    <string name="search_hint">Поиск по задачам</string>
+    <string name="create_pin">Создайте PIN</string>
+    <string name="tasks_not_found">Задачи не найденны</string>
+    <string name="create_task">Создать задачу</string>
+    <string name="all">Все</string>
+</resources>

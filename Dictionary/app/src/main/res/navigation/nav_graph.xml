@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/pinFragment">
+
+    <fragment
+        android:id="@+id/pinFragment"
+        android:name="com.example.dictionary.PinFragment"
+        android:label="PinFragment" >
+        <action
+            android:id="@+id/action_pinFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.dictionary.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_editorFragment"
+            app:destination="@id/editorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editorFragment"
+        android:name="com.example.dictionary.EditorFragment"
+        android:label="EditorFragment" >
+        <action
+            android:id="@+id/action_editorFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/editorFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

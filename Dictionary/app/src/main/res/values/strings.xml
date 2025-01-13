@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Dictionary</string>
+    <string name="create_pin">Придумайте PIN-код</string>
+    <string name="repeat_pin">Повторите PIN-код</string>
+    <string name="enter_pin">Введите PIN-код</string>
+    <string name="pins_mismatch">PIN-коды не совпадают. Попробуйте снова</string>
+    <string name="pin_error">Введен неверный PIN-код</string>
+    <string name="number_1">1</string>
+    <string name="number_2">2</string>
+    <string name="number_3">3</string>
+    <string name="number_4">4</string>
+    <string name="number_5">5</string>
+    <string name="number_6">6</string>
+    <string name="number_7">7</string>
+    <string name="number_8">8</string>
+    <string name="number_9">9</string>
+    <string name="number_0">0</string>
+    <string name="empty_list">Записи в дневнике отсутсвуют</string>
+    <string name="create_record">Создать запись</string>
+    <string name="diary">Дневник</string>
+    <string name="record_editor">Редактор записи</string>
+    <string name="record_name">Название записи</string>
+    <string name="record_content">Текст записи</string>
+    <string name="save_record">Сохранить запись</string>
+    <string name="filter">Фильтровать</string>
+</resources>

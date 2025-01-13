@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Task list</string>
+    <string name="status_created">Created</string>
+    <string name="status_in_progress">In progress</string>
+    <string name="status_complete">Complete</string>
+    <string name="task_editor">Task editor</string>
+    <string name="task_name">Task name</string>
+    <string name="task_description">Task description</string>
+    <string name="pin_error">Incorrect PIN</string>
+    <string name="pin_create">Create PIN</string>
+    <string name="pin_enter">Enter PIN</string>
+    <string name="pin_repeat">Repeat PIN</string>
+    <string name="task_search">Search for tasks</string>
+    <string name="tasks_not_found">Tasks not found</string>
+    <string name="task_create">Create task</string>
+    <string name="all">All</string>
+</resources>

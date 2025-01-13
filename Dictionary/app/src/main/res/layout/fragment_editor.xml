@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!--    TODO Заменить на AppBarLayout -->
+    <!--    TODO Кнопку назад сделать через navigationIcon, кнопку сохранить сделать через menu-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/arrow_back"
+            app:menu="@menu/editor_menu">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/record_editor"
+                android:textAlignment="center"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/record_title"
+                android:layout_marginBottom="32dp"
+                android:hint="@string/record_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="title"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:scrollbars="none" />
+
+            <EditText
+                android:id="@+id/record_content"
+                android:hint="@string/record_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="description"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:minLines="3"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
